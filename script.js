@@ -19,10 +19,10 @@ const mostrarPokemon = async () => {
     if (id) {
         const data = await requestPokemon(id);
         if (data) {
-            // Llama a pokemonData solo si se obtuvieron datos
+
             pokemonData(data);
         } else {
-            // Manejar caso de error o falta de datos
+            container.innerHTML = '<p>Pokémon no encontrado</p>';
         }
     }
 }
